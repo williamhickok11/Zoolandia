@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Zoolandia.Animals;
 
 namespace Zoolandia
 {
@@ -20,6 +20,6 @@ namespace Zoolandia
         public int windowCount;
 
         public List<Animal> inhabitants;
-        public List<Decorations> decorations { get; set; }
+        // public List<Decorations> decorations { get; set; }
     }
 }

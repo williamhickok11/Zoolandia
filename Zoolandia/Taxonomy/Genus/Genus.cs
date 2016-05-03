@@ -5,15 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Zoolandia;
 
-namespace Zoolandia
+namespace Zoolandia.Taxonomy
 {
     class Genus
     {
         public string genusName = "";
         public double intelegence { get; set; }
     }
-}
 
+
+/*
 // Species
 class Ursidae : Animal
 {
@@ -35,4 +36,6 @@ class Macaca : Animal
     public string genusName = "Macaca";
     // make these different
     public bool _isMasked = true;
+}
+*/
 }
