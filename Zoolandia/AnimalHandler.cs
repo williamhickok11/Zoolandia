@@ -31,7 +31,7 @@ namespace Zoolandia
 				WHERE a.IdAnimal = 
 				" + IdAnimal;
 
-            const string connectionString = "URI=file:/Users/stevebrownlee/dev/github/chortlehoort/SimpleServer/SimpleServer/Zoolandia.db";
+            const string connectionString = "";
 
             System.Data.IDbConnection dbcon = new SqliteConnection(connectionString);
 
