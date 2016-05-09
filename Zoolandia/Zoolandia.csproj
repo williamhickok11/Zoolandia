@@ -62,9 +62,11 @@
     <Compile Include="Animals\Bird.cs" />
     <Compile Include="Animals\Monkey.cs" />
     <Compile Include="Animals\Shark.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="Habitat\Habitats\Aquatic.cs" />
     <Compile Include="Habitat\Habitats\Aviary.cs" />
     <Compile Include="Habitat\Decoration.cs" />
+    <Compile Include="Habitat\HabitatType.cs" />
     <Compile Include="Server\HttpProcessor.cs" />
     <Compile Include="Server\HttpServer.cs" />
     <Compile Include="Taxonomy\GenusFolder\Genus.cs" />

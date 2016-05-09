@@ -8,8 +8,9 @@ namespace Zoolandia
 {
     class Employee
     {
-        public string name { get; set; }
-        public List<Habitat> Habitats { get; set; }
-        public int salary { get; set; }
+        public int IdEmployee { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+        public int Age { get; set; }
     }
 }
