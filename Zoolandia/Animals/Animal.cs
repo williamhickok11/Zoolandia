@@ -4,34 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Zoolandia.Interfaces;
+using Zoolandia.Taxonomy.Species;
 
 namespace Zoolandia.Animals
 {
     class Animal : IAnimal
     {
-        public void eat()
-        {
-            throw new NotImplementedException();
-        }
+        public int IdAnimal { get; set; }
+        public string Name { get; set; }
+        public Habitat IdHabitat { get; set; }
+        public Species IdSpecies { get; set; }
 
-        public void eat(string food)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void move()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void reproduce()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void sleep()
-        {
-            throw new NotImplementedException();
-        }
+        public void eat() {}
+        public void eat(string food) {}
+        public void move() {}
+        public void reproduce() {}
+        public void sleep() {}
     }
 }

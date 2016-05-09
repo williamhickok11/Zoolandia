@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoolandia
 {
-    class Savanna : Habitat, IMoveable
+    class Savanna : Habitat
     {
         public string destination
         {

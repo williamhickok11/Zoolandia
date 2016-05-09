@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using Zoolandia.Species_Names.Falco;
-using Zoolandia.Species_Names.Macaca;
+using System.Threading;
+using Zoolandia.Animals;
 
 namespace Zoolandia
 {
     class Zoolandia
     {
-        static void Main(string[] args)
+        
+        public static int Main(string[] args)
         {
             Savanna savanna = new Savanna();
             Aquatic aquarium = new Aquatic();
@@ -16,30 +17,19 @@ namespace Zoolandia
 
             savanna.inhabitants = new List<Animal>();
 
-            Owl manny = new Owl();
-            manny.name = "Manny";
-            manny.species = new Falco();
-
-            Owl danny = new Owl();
-            manny.name = "Danny";
-            manny.species = new Falco();
-
-            crestedBlack wildBill = new crestedBlack();
-            manny.name = "WildBill";
-            // manny.species = new SPECIESNAMEHERE();
-
-            savanna.inhabitants.Add(manny);
-            savanna.inhabitants.Add(danny);
-
-            foreach(Animal a in savanna.inhabitants)
+            HttpServer httpServer;
+            if (args.GetLength(0) > 0)
             {
-                Console.WriteLine(a.name);
+                httpServer = new MyHttpServer(Convert.ToInt16(args[0]));
             }
+            else
+            {
+                httpServer = new MyHttpServer(8080);
+            }
+            Thread thread = new Thread(new ThreadStart(httpServer.listen));
+            thread.Start();
+            return 0;
 
-            // Animal firstAnimal = new Animal(args[0]);
-            // firstAnimal.species = new TenoderaAngustipennis();
-
-            // Console.WriteLine("{0} the {1}", firstAnimal.name, firstAnimal.species.commonName);
         }
     }
 }

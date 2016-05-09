@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Zoolandia
 {
-    interface IMoveable
+    class Employee
     {
-        string destination { set; get; }
+        public string name { get; set; }
+        public List<Habitat> Habitats { get; set; }
+        public int salary { get; set; }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoolandia.Taxonomy.Genus
+namespace Zoolandia.Taxonomy
 {
-    class Falco : Genus
+    class Macaca : Genus
     {
     }
 }
