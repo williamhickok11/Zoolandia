@@ -7,9 +7,9 @@ using Zoolandia.Model;
 
 namespace Zoolandia
 {
-    class Mexicanus : Species
+    class Black_Falcon : Species
     {
-        public Mexicanus()
+        public Black_Falcon()
         {
             //this.url = "https://en.wikipedia.org/wiki/Chinese_mantis";
             //// this.genus = new Tenodera("Asia");
