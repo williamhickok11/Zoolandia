@@ -76,7 +76,7 @@ namespace Zoolandia
                     {
                         Console.WriteLine("Getting all animals");
                         AnimalHandler animals = new AnimalHandler();
-                        message = animals.getAllAnimals();
+                        //message = animals.getAllAnimals();
                     }
 
                     break;

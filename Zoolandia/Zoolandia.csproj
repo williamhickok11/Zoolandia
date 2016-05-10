@@ -48,7 +48,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,38 +68,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimalHandler.cs" />
-    <Compile Include="Animals\Bird.cs" />
-    <Compile Include="Animals\Monkey.cs" />
-    <Compile Include="Animals\Shark.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Habitat\Habitats\Aquatic.cs" />
-    <Compile Include="Habitat\Habitats\Aviary.cs" />
-    <Compile Include="Habitat\Decoration.cs" />
-    <Compile Include="Habitat\HabitatType.cs" />
+    <Compile Include="Model\Animals\Bird.cs" />
+    <Compile Include="Model\Animals\Monkey.cs" />
+    <Compile Include="Model\Animals\Shark.cs" />
+    <Compile Include="Model\Employees\Employee.cs" />
+    <Compile Include="Model\Habitat\Habitats\Aquatic.cs" />
+    <Compile Include="Model\Habitat\Habitats\Aviary.cs" />
+    <Compile Include="Model\Habitat\Decoration.cs" />
+    <Compile Include="Model\Habitat\HabitatType.cs" />
+    <Compile Include="Model\Employees\Maintenance.cs" />
+    <Compile Include="Model\ZoolandiaDbContext.cs" />
     <Compile Include="Server\HttpProcessor.cs" />
     <Compile Include="Server\HttpServer.cs" />
-    <Compile Include="Taxonomy\GenusFolder\Genus.cs" />
-    <Compile Include="Animals\Animal.cs" />
-    <Compile Include="Habitat\Habitat.cs" />
-    <Compile Include="Interfaces\IAnimal.cs" />
-    <Compile Include="Interfaces\IAquatic.cs" />
-    <Compile Include="Interfaces\IAviary.cs" />
+    <Compile Include="Model\Taxonomy\GenusFolder\Genus.cs" />
+    <Compile Include="Model\Animals\Animal.cs" />
+    <Compile Include="Model\Habitat\Habitat.cs" />
+    <Compile Include="Model\Interfaces\IAnimal.cs" />
+    <Compile Include="Model\Interfaces\IAquatic.cs" />
+    <Compile Include="Model\Interfaces\IAviary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Habitat\Habitats\Savanna.cs" />
-    <Compile Include="Taxonomy\SpeciesFolder\Species.cs" />
-    <Compile Include="Taxonomy\GenusFolder\Falco.cs" />
-    <Compile Include="Taxonomy\GenusFolder\Galeocerdo.cs" />
-    <Compile Include="Taxonomy\GenusFolder\Macaca.cs" />
-    <Compile Include="Taxonomy\SpeciesFolder\Species_of_Falco\Mexicanus.cs" />
-    <Compile Include="Taxonomy\SpeciesFolder\Species_of_Galeocerdo\Tiger_Shark.cs" />
-    <Compile Include="Taxonomy\SpeciesFolder\Species_of_Macaca\Crested_Black.cs" />
-    <Compile Include="Taxonomy\Taxonomy.cs" />
+    <Compile Include="Model\Habitat\Habitats\Savanna.cs" />
+    <Compile Include="Model\Taxonomy\SpeciesFolder\Species.cs" />
+    <Compile Include="Model\Taxonomy\GenusFolder\Falco.cs" />
+    <Compile Include="Model\Taxonomy\GenusFolder\Galeocerdo.cs" />
+    <Compile Include="Model\Taxonomy\GenusFolder\Macaca.cs" />
+    <Compile Include="Model\Taxonomy\SpeciesFolder\Species_of_Falco\Mexicanus.cs" />
+    <Compile Include="Model\Taxonomy\SpeciesFolder\Species_of_Galeocerdo\Tiger_Shark.cs" />
+    <Compile Include="Model\Taxonomy\SpeciesFolder\Species_of_Macaca\Crested_Black.cs" />
+    <Compile Include="Model\Taxonomy\Taxonomy.cs" />
     <Compile Include="TenoderaSinensis.cs" />
     <Compile Include="Zoo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ZooTables.mdf">
