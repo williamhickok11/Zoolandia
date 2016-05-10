@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zoolandia.Model.Animals;
-using Zoolandia.Model.Animals.Habitats;
 
-namespace Zoolandia
+namespace Zoolandia.Model
 {
     class Savanna : Habitat
     {

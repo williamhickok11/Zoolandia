@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Zoolandia.Models
 {
-    public class Animal
+    public class Species
     {
-        public int IdAnimal { get; set; }
-        public string Name { get; set; }
-        public int IdHabitat { get; set; }
         public int IdSpecies { get; set; }
+        public string ScientificName { get; set; }
+        public string CommonName { get; set; }
+        public string WikiLink { get; set; }
     }
 }

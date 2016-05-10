@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zoolandia.Model.Animals;
-using Zoolandia.Model.Animals.Habitats;
-using Zoolandia.Taxonomy.Species;
+using Zoolandia.Model;
 
 namespace Zoolandia.Interfaces
 {

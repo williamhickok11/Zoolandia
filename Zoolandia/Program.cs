@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Threading;
-using Zoolandia.Model.Animals;
+using Zoolandia.Model;
 
 namespace Zoolandia
 {

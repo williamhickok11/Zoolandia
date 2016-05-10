@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoolandia
+namespace Zoolandia.Model
 {
-    public class HabitatType
+    class Aviary : Habitat, IAviary
     {
-        public int IdType { get; set; }
-        public string Name { get; set; }
     }
 }

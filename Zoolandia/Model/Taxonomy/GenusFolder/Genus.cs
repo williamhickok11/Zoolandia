@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Zoolandia;
 
-namespace Zoolandia.Taxonomy
+namespace Zoolandia.Model
 {
     public class Genus
     {

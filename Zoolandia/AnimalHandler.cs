@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zoolandia.Models;
 
 namespace Zoolandia
 {
@@ -33,9 +34,6 @@ namespace Zoolandia
 
             using (var zoolandiaDbContext = new ZoolandiaDbContext())
             {
-                //UserManagerFactory
-                //= () => new UserManager<IdentityUser>(new UserStore<IdentityUser>(new zoolandiaDbContext()));
-
                 //var habitat = zoolandiaDbContext.Habitat;
                 var animalList = zoolandiaDbContext.Animal;
                 foreach (var animal in animalList)

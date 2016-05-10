@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zoolandia.Model;
 
-namespace Zoolandia.Taxonomy.Species.Species_of_Galeocerdo
+namespace Zoolandia
 {
     class Tiger_Shark : Species
     {

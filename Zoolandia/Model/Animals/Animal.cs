@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Zoolandia.Interfaces;
-using Zoolandia.Taxonomy.Species;
-using Zoolandia.Model.Animals.Habitats;
 
-namespace Zoolandia.Model.Animals
+namespace Zoolandia.Model
 {
     public class Animal //: IAnimal
     {

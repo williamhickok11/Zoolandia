@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zoolandia.Model;
 
-namespace Zoolandia.Taxonomy.Species.Species_of_Macaca
+namespace Zoolandia
 {
     class Crested_Black : Species
     {

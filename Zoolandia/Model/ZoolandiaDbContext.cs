@@ -4,10 +4,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using Zoolandia.Model.Animals;
 using Zoolandia.Models;
-using Zoolandia.Model.Animals.Habitats;
-using Zoolandia.Taxonomy.Species;
+//using Zoolandia.Model.Animals;
 
 namespace Zoolandia
 {

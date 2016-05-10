@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoolandia.Model
+namespace Zoolandia.Models
 {
-    class Employee
+    public class HabitatType
     {
-        public int IdEmployee { get; set; }
+        public int IdHabitatType { get; set; }
         public string Name { get; set; }
-        public int Salary { get; set; }
-        public int Age { get; set; }
     }
 }

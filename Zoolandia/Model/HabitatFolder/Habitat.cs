@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoolandia.Model.Animals.Habitats
+namespace Zoolandia.Model
 {
     public class Habitat
     {
