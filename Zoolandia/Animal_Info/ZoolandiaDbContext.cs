@@ -21,8 +21,6 @@ namespace Zoolandia
         {
             // this incorporates the tables you need
             //can configure more than this but could do everything you want in LINQ
-            //UserManagerFactory
-            //    = () => new UserManager<IdentityUser>(new UserStore<IdentityUser>(new modelBuilder()));
 
             modelBuilder.Entity<Habitat>()
                 .ToTable("Habitat")

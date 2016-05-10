@@ -22,8 +22,8 @@ namespace Zoolandia
             //savanna.inhabitants = new List<Animal>();
 
 
-            AnimalHandler animals = new AnimalHandler();
-            animals.getAnimal("1");
+            //AnimalHandler animals = new AnimalHandler();
+            //animals.getAnimal("1");
             HttpServer httpServer;
             if (args.GetLength(0) > 0)
             {
@@ -36,7 +36,6 @@ namespace Zoolandia
             Thread thread = new Thread(new ThreadStart(httpServer.listen));
             thread.Start();
             return 0;
-
         }
     }
 }

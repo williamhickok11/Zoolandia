@@ -61,7 +61,7 @@ namespace Zoolandia
 
             string[] urlParams = p.http_url.Split('/');
             string type = urlParams[1].ToString();
-
+            Console.WriteLine(type);
             switch (type)
             {
                 case "animals":
@@ -76,7 +76,7 @@ namespace Zoolandia
                     {
                         Console.WriteLine("Getting all animals");
                         AnimalHandler animals = new AnimalHandler();
-                        //message = animals.getAllAnimals();
+                        message = animals.getAllAnimals();
                     }
 
                     break;
@@ -88,6 +88,7 @@ namespace Zoolandia
 
             p.outputStream.WriteLine(message);
             p.outputStream.WriteLine("</body></html>");
+            
         }
 
         public override void handlePOSTRequest(HttpProcessor p, StreamReader inputData)
