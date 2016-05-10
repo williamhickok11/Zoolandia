@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Zoolandia.Interfaces;
 using Zoolandia.Taxonomy.Species;
+using Zoolandia.Model.Animals.Habitats;
 
 namespace Zoolandia.Model.Animals
 {
-    public class Animal : IAnimal
+    public class Animal //: IAnimal
     {
         public int IdAnimal { get; set; }
         public string Name { get; set; }

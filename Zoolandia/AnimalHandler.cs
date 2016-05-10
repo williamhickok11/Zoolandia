@@ -33,13 +33,16 @@ namespace Zoolandia
 
             using (var zoolandiaDbContext = new ZoolandiaDbContext())
             {
-                var habitat = zoolandiaDbContext.Habitat;
+                //UserManagerFactory
+                //= () => new UserManager<IdentityUser>(new UserStore<IdentityUser>(new zoolandiaDbContext()));
+
+                //var habitat = zoolandiaDbContext.Habitat;
                 var animalList = zoolandiaDbContext.Animal;
                 foreach (var animal in animalList)
                 {
                     response += "<div class=\"animal animal-id-" + animal.IdAnimal + "\">";
                     response += "<h2>" + animal.Name + "</h2>";
-                    response += "<div>Lives in the " + animal.IdHabitat + " (" + animal.IdSpecies + " type) habitat</div>";
+                    //response += "<div>Lives in the " + animal.IdHabitat + " (" + animal.IdSpecies + " type) habitat</div>";
                     response += "</div>";
                 }
 

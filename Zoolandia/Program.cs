@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Threading;
 using Zoolandia.Model.Animals;
 
@@ -10,6 +11,9 @@ namespace Zoolandia
         
         public static int Main(string[] args)
         {
+            Database.SetInitializer<ZoolandiaDbContext>(null);
+
+
             //Savanna savanna = new Savanna();
             //Aquatic aquarium = new Aquatic();
             //Habitat snakePit = new Habitat();

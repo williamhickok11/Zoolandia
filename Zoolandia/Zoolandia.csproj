@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimalHandler.cs" />
+    <Compile Include="Models\Animal.cs" />
     <Compile Include="Model\Animals\Bird.cs" />
     <Compile Include="Model\Animals\Monkey.cs" />
     <Compile Include="Model\Animals\Shark.cs" />
