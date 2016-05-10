@@ -4,14 +4,17 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zoolandia.Animals;
+using Zoolandia.Model.Animals;
+using Zoolandia.Taxonomy.Species;
 
 namespace Zoolandia
 {
-    class ZoolandiaDbContext : DbContext
+    public class ZoolandiaDbContext : DbContext
     {
 
         public DbSet<Animal> Animal { get; set; }
+        public DbSet<Habitat> Habitat { get; set; }
+        public DbSet<Species> Species { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -20,6 +23,14 @@ namespace Zoolandia
             modelBuilder.Entity<Animal>()
                 .ToTable("Animal")
                 .HasKey(a => a.IdAnimal);
+
+            modelBuilder.Entity<Habitat>()
+                .ToTable("Habitat")
+                .HasKey(h => h.IdHabitat);
+
+            modelBuilder.Entity<Species>()
+                .ToTable("Species")
+                .HasKey(s => s.IdSpecies);
         }
 
 

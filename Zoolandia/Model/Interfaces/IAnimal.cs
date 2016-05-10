@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zoolandia.Model.Animals;
 using Zoolandia.Taxonomy.Species;
 
 namespace Zoolandia.Interfaces
@@ -11,8 +12,8 @@ namespace Zoolandia.Interfaces
     {
         int IdAnimal { get; set; }
         string Name { get; set; }
-        Species IdSpecies { get; set; }
-        Habitat IdHabitat { get; set; }
+        Species Species { get; set; }
+        Habitat Habitat { get; set; }
 
         void eat();
         void eat(string food);

@@ -7,7 +7,7 @@ using Zoolandia.Taxonomy;
 
 namespace Zoolandia.Taxonomy.Species
 {
-    class Species : Taxonomy
+    public class Species : Taxonomy
     {
         public int IdSpecies { get; set; }
         public string ScientifName { get; set; }

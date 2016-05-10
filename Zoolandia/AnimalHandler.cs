@@ -16,23 +16,24 @@ namespace Zoolandia
         {
             string response = "";
 
-            string query = @"
-				SELECT 
-				  a.IdAnimal,
-				  a.Name, 
-				  h.Name HabitatName,
-				  ht.Name HabitatType,
-				  s.CommonName,
-				  s.ScientificName
-				FROM Animal a
-				INNER JOIN Species s ON a.IdSpecies = s.IdSpecies
-				INNER JOIN Habitat h ON h.IdHabitat = a.IdHabitat
-				INNER JOIN HabitatType ht on ht.IdType = h.IdType
-				WHERE a.IdAnimal = 
-				" + IdAnimal;
+    //        string query = @"
+				//SELECT 
+				//  a.IdAnimal,
+				//  a.Name, 
+				//  h.Name HabitatName,
+				//  ht.Name HabitatType,
+				//  s.CommonName,
+				//  s.ScientificName
+				//FROM Animal a
+				//INNER JOIN Species s ON a.IdSpecies = s.IdSpecies
+				//INNER JOIN Habitat h ON h.IdHabitat = a.IdHabitat
+				//INNER JOIN HabitatType ht on ht.IdType = h.IdType
+				//WHERE a.IdAnimal = 
+				//" + IdAnimal;
 
             using (var zoolandiaDbContext = new ZoolandiaDbContext())
             {
+                var habitat = zoolandiaDbContext.Habitat;
                 var animalList = zoolandiaDbContext.Animal;
                 foreach (var animal in animalList)
                 {

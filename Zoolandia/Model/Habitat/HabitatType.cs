@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoolandia
 {
-    class HabitatType
+    public class HabitatType
     {
         public int IdType { get; set; }
         public string Name { get; set; }

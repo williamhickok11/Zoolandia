@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zoolandia.Animals;
 
-namespace Zoolandia
+namespace Zoolandia.Model.Animals
 {
-    class Habitat
+    public class Habitat
     {
         public int IdHabitat { get; set; }
         public string Name { get; set; }

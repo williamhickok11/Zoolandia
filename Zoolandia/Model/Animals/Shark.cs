@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoolandia.Animals
+namespace Zoolandia.Model.Animals
 {
-    class Shark : Animal
+    public class Shark : Animal
     {
     }
 }

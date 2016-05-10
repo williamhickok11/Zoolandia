@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoolandia.Taxonomy
 {
-    class Taxonomy
+    public class Taxonomy
     {
         public string url { get; set; }
         public string trait { get; set; }

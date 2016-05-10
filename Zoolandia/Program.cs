@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using Zoolandia.Animals;
+using Zoolandia.Model.Animals;
 
 namespace Zoolandia
 {
@@ -10,13 +10,16 @@ namespace Zoolandia
         
         public static int Main(string[] args)
         {
-            Savanna savanna = new Savanna();
-            Aquatic aquarium = new Aquatic();
-            Habitat snakePit = new Habitat();
-            Habitat aviary = new Habitat();
+            //Savanna savanna = new Savanna();
+            //Aquatic aquarium = new Aquatic();
+            //Habitat snakePit = new Habitat();
+            //Habitat aviary = new Habitat();
 
-            savanna.inhabitants = new List<Animal>();
+            //savanna.inhabitants = new List<Animal>();
 
+
+            AnimalHandler animals = new AnimalHandler();
+            animals.getAnimal("1");
             HttpServer httpServer;
             if (args.GetLength(0) > 0)
             {

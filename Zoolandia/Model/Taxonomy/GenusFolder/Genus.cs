@@ -7,7 +7,7 @@ using Zoolandia;
 
 namespace Zoolandia.Taxonomy
 {
-    class Genus
+    public class Genus
     {
         public string genusName = "";
         public double intelegence { get; set; }
