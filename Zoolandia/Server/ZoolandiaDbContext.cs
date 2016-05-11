@@ -15,7 +15,7 @@ namespace Zoolandia
         public DbSet<Animal> Animal { get; set; }
         public DbSet<HabitatType> HabitatType { get; set; }
         public DbSet<Employee> Employee { get; set; }
-        //public DbSet<Species> Species { get; set; }
+        public DbSet<Species> Species { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -38,9 +38,9 @@ namespace Zoolandia
                 .ToTable("Employee")
                 .HasKey(e => e.IdEmployee);
 
-            //modelBuilder.Entity<Species>()
-            //    .ToTable("Species")
-            //    .HasKey(s => s.IdSpecies);
+            modelBuilder.Entity<Species>()
+                .ToTable("Species")
+                .HasKey(s => s.IdSpecies);
         }
 
 

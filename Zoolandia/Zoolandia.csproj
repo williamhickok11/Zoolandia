@@ -83,7 +83,7 @@
     <Compile Include="Animal_Info\HabitatFolder\Decoration.cs" />
     <Compile Include="Animal_Info\HabitatFolder\HabitatType.cs" />
     <Compile Include="Animal_Info\Employees\Maintenance.cs" />
-    <Compile Include="Animal_Info\ZoolandiaDbContext.cs" />
+    <Compile Include="Server\ZoolandiaDbContext.cs" />
     <Compile Include="Server\HttpProcessor.cs" />
     <Compile Include="Server\HttpServer.cs" />
     <Compile Include="Animal_Info\Taxonomy\GenusFolder\Genus.cs" />

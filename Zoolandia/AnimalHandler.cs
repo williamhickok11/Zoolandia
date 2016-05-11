@@ -13,19 +13,37 @@ namespace Zoolandia
         {
         }
 
-        public string getAnimal(string IdAnimal)
+        public string getAllAnimals()
         {
             string response = "";
 
             using (var zoolandiaDbContext = new ZoolandiaDbContext())
             {
-                var habitat = zoolandiaDbContext.Habitat;
-                var animalList = zoolandiaDbContext.Animal;
-                foreach (var animal in animalList)
+                var allAnimalInfo = (from Animal in zoolandiaDbContext.Animal
+                                           join Habitat in zoolandiaDbContext.Habitat
+                                           on Animal.IdHabitat equals Habitat.IdHabitat
+                                           
+                                           join HabitatType in zoolandiaDbContext.HabitatType
+                                           on Habitat.IdHabitatType equals HabitatType.IdHabitatType
+
+                                           join Species in zoolandiaDbContext.Species
+                                           on Animal.IdSpecies equals Species.IdSpecies
+                                           select new
+                                           {
+                                               habitatName = Habitat.Name,
+                                               animalId = Animal.IdAnimal,
+                                               animalSpecies = Species.CommonName,
+                                               animalName = Animal.Name,
+                                               animalScientificName = Species.ScientificName,
+                                               habitatTypeName = HabitatType.Name
+                                           }).ToList();
+                
+                foreach (var animal in allAnimalInfo)
                 {
-                    response += "<div class=\"animal animal-id-" + animal.IdAnimal + "\">";
-                    response += "<h2>" + animal.Name + "</h2>";
-                    response += "<div>Lives in the " + animal.IdHabitat + " (" + animal.IdSpecies + " type) habitat</div>";
+                    response += "<div class=\"animal animal-id-" + animal.animalId + "\">";
+                    response += "<h2>" + animal.animalName + "</h2>";
+                    response += "<div><a href='/animals/" + animal.animalId + "'>" + animal.animalScientificName + "</a></div>";
+                    response += "<div>Lives in the " + animal.habitatName + " (" + animal.habitatTypeName + " type) habitat</div>";
                     response += "</div>";
                 }
 
@@ -34,19 +52,40 @@ namespace Zoolandia
             }
         }
 
-        public string getAllAnimals()
+        public string getAnimal(string IdAnimal)
         {
+            var currentAnimalId = Int32.Parse(IdAnimal);
             string response = "";
 
             using (var zoolandiaDbContext = new ZoolandiaDbContext())
             {
-                var habitat = zoolandiaDbContext.Habitat;
-                var animalList = zoolandiaDbContext.Animal;
-                foreach (var animal in animalList)
+                var allAnimalInfo = (from Animal in zoolandiaDbContext.Animal
+                                     join Habitat in zoolandiaDbContext.Habitat
+                                     on Animal.IdHabitat equals Habitat.IdHabitat
+
+                                     join HabitatType in zoolandiaDbContext.HabitatType
+                                     on Habitat.IdHabitatType equals HabitatType.IdHabitatType
+
+                                     join Species in zoolandiaDbContext.Species
+                                     on Animal.IdSpecies equals Species.IdSpecies
+
+                                     where Animal.IdAnimal == currentAnimalId
+                                     select new
+                                     {
+                                         habitatName = Habitat.Name,
+                                         animalId = Animal.IdAnimal,
+                                         animalSpecies = Species.CommonName,
+                                         animalName = Animal.Name,
+                                         animalScientificName = Species.ScientificName,
+                                         habitatTypeName = HabitatType.Name
+                                     }).ToList();
+
+                foreach (var animal in allAnimalInfo)
                 {
-                    response += "<div class=\"animal animal-id-" + animal.IdAnimal + "\">";
-                    response += "<h2>" + animal.Name + "</h2>";
-                    response += "<div>Lives in the " + animal.IdHabitat + " (" + animal.IdSpecies + " type) habitat</div>";
+                    response += "<div class=\"animal animal-id-" + animal.animalId + "\">";
+                    response += "<h2>" + animal.animalName + "</h2>";
+                    response += "<div><a href='/animals/" + animal.animalId + "'>" + animal.animalScientificName + "</a></div>";
+                    response += "<div>Lives in the " + animal.habitatName + " (" + animal.habitatTypeName + " type) habitat</div>";
                     response += "</div>";
                 }
 
